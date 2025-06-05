@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Define base path for logs (adjust to your structure)
-LOG_DIR="hospital_data/active_logs"
-ARCHIVE_DIR_BASE="hospital_data"
+LOG_DIR="../active_logs"
+ARCHIVE_DIR_BASE="hospital-monitoring-system/archive_logs"
 
 echo "Select log to archive:"
 echo "1) Heart Rate"
@@ -25,12 +25,12 @@ case $choice in
     ;;
   2)
     LOG_FILE="$LOG_DIR/temperature.log"
-    ARCHIVE_DIR="$ARCHIVE_DIR_BASE/temp_data_archive"
+    ARCHIVE_DIR="$ARCHIVE_DIR_BASE/temperature_data_archive"
     LOG_BASE_NAME="temperature"
     ;;
   3)
     LOG_FILE="$LOG_DIR/water_usage.log"
-    ARCHIVE_DIR="$ARCHIVE_DIR_BASE/water_data_archive"
+    ARCHIVE_DIR="$ARCHIVE_DIR_BASE/water_usage_data_archive"
     LOG_BASE_NAME="water_usage"
     ;;
 esac
