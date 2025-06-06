@@ -10,13 +10,14 @@ echo "2) Temperature"
 echo "3) Water Usage"
 read -p "Enter choice (1-3): " choice
 
-# Validate input is 1, 2, or 3
+# Check if the input is a valid option: 1, 2, or 3
+
 if ! [[ "$choice" =~ ^[1-3]$ ]]; then
   echo "Invalid choice. Please enter 1, 2, or 3."
   exit 1
 fi
 
-# Set variables based on choice
+
 case $choice in
   1)
     LOG_FILE="$LOG_DIR/heart_rate.log"
@@ -35,7 +36,7 @@ case $choice in
     ;;
 esac
 
-# Check if log file exists
+
 if [ ! -f "$LOG_FILE" ]; then
   echo "Log file $LOG_FILE does not exist. Cannot archive."
   exit 1
@@ -51,10 +52,11 @@ if [ ! -d "$ARCHIVE_DIR" ]; then
   fi
 fi
 
-# Create timestamp
+
 TIMESTAMP=$(date +"%Y-%m-%d_%H:%M:%S")
 
-# Archive filename
+# Specify the name of the file to archive
+
 ARCHIVE_FILE="${ARCHIVE_DIR}/${LOG_BASE_NAME}_${TIMESTAMP}.log"
 
 echo "Archiving $LOG_FILE..."
