@@ -1,0 +1,21 @@
+
+=== HEART RATE LOG ANALYSIS ===
+Date: 2025-06-06 14:07:10
+
+Device Activity Summary:
+Device_HR001: 4 entries
+  First seen: 2024-06-04 08:00:10
+  Last seen:  2024-06-04 08:30:40
+
+Device_HR002: 2 entries
+  First seen: 2024-06-04 08:10:20
+  Last seen:  2024-06-04 08:25:35
+
+Device_HR003: 1 entries
+  First seen: 2024-06-04 08:20:30
+  Last seen:  2024-06-04 08:20:30
+
+Total devices found: 3
+Total log entries: 7
+===============================
+
